@@ -91,9 +91,3 @@ Java_com_google_oboe_samples_rhythmgame_MainActivity_native_1setDefaultStreamVal
     oboe::DefaultStreamValues::FramesPerBurst = (int32_t) framesPerBurst;
 }
 } // extern "C"
-extern "C"
-JNIEXPORT jboolean JNICALL
-Java_com_google_oboe_samples_rhythmgame_GameView_native_1isSongDoneLoading(JNIEnv *env,
-                                                                           jobject thiz) {
-    return game->isSongDoneLoading();
-}
