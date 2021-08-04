@@ -39,7 +39,7 @@ constexpr int kWindowCenterOffsetMs = 100;
 constexpr char kClapFilename[] { "CLAP.mp3" };
 
 // Filename for the backing track asset (in assets folder)
-constexpr char kBackingTrackFilename[] { "FUNKY_HOUSE.mp3" };
+constexpr char kBackingTrackFilename[] { "Mike Leite - Vacaciones.mp3" };
 
 // The game will first demonstrate the pattern which the user should copy. It does this by
 // "clapping" (playing a clap sound) at certain times during the song. We can specify these times

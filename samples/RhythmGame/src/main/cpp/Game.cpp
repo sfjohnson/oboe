@@ -180,7 +180,7 @@ bool Game::openStream() {
     builder.setFormatConversionAllowed(true);
     builder.setPerformanceMode(PerformanceMode::LowLatency);
     builder.setSharingMode(SharingMode::Exclusive);
-    builder.setSampleRate(48000);
+    builder.setSampleRate(44100);
     builder.setSampleRateConversionQuality(
             SampleRateConversionQuality::Medium);
     builder.setChannelCount(2);

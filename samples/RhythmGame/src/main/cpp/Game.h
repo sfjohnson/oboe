@@ -50,6 +50,7 @@ public:
     void onSurfaceChanged(int widthInPixels, int heightInPixels);
     void tick();
     void tap(int64_t eventTimeAsUptime);
+    bool isSongDoneLoading();
 
     // Inherited from oboe::AudioStreamDataCallback.
     DataCallbackResult

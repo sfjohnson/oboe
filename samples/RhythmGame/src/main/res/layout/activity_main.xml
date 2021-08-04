@@ -6,19 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.google.oboe.samples.rhythmgame.MainActivity">
 
-    <com.google.oboe.samples.rhythmgame.GameSurfaceView
-        android:id="@+id/glSurfaceView"
+    <com.google.oboe.samples.rhythmgame.GameView
+        android:id="@+id/gameView"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
+        android:background="@drawable/background_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="match_parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
