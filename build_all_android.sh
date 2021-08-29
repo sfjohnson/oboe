@@ -29,7 +29,7 @@ fi
 BUILD_DIR=build
 
 CMAKE_ARGS="-H. \
-  -DBUILD_SHARED_LIBS=true \
+  -DBUILD_SHARED_LIBS=false \
   -DCMAKE_BUILD_TYPE=RelWithDebInfo \
   -DANDROID_TOOLCHAIN=clang \
   -DANDROID_STL=c++_shared \
@@ -58,12 +58,4 @@ function build_oboe {
   popd
 }
 
-build_oboe armeabi-v7a 16
-build_oboe arm64-v8a 21
-build_oboe x86 16
-build_oboe x86_64 21
-
-# Currently unsupported ABIs
-# build_oboe armeabi 16 - This was deprecated in Android 16 and removed in 17
-# build_oboe mips 21 - This was deprecated in Android 16 and removed in 17
-# build_oboe mips64
+build_oboe arm64-v8a 30

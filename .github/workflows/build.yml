@@ -1,0 +1,33 @@
+name: Build Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-release-android:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Build
+        run: |
+          ./build_all_android.sh
+        env:
+          ANDROID_NDK: /usr/local/lib/android/sdk/ndk-bundle
+
+      - name: Rename build output
+        run: mv build/arm64-v8a/staging/lib/arm64-v8a/liboboe.a liboboe-android30.a
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            liboboe-android30.a
+            LICENSE
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
